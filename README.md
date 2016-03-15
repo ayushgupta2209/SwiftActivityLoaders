@@ -5,6 +5,7 @@ Glass Filling Activity Loader
 <br />
 <br />
 ![Alt text](SwiftActivityLoaders/Demo%20GIFs/GlassFilling.gif?raw=true "Glass Filling")
+![Alt text](SwiftActivityLoaders/Demo%20GIFs/GlassFillingNew.gif?raw=true "Glass Filling")
 
 Car Loader
 <br />
