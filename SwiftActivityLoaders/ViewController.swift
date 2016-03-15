@@ -15,9 +15,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func glassFillingButtonClicked(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("waterSegue", sender: self)
+    }
+    
+    @IBAction func carLoaderButtonClicked(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("carSegue", sender: self)
     }
 
 }
