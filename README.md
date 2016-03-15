@@ -2,4 +2,4 @@
 Different Activity Loaders in Swift
 
 Glass Filling Activity Loader
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Alt text](SwiftActivityLoaders/Demo%20GIFs/GlassFilling.gif?raw=true "Glass Filling")
