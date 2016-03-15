@@ -19,31 +19,35 @@ class GlassFillingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        wineAnimation()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func addWineDroppingAnimation(beginTime: CFTimeInterval) -> CAKeyframeAnimation {
-        let wineDroppingAnimation = CAKeyframeAnimation.init(keyPath: "opacity")
-        wineDroppingAnimation.beginTime = beginTime
-        wineDroppingAnimation.duration = 1.0
-        wineDroppingAnimation.values = [0.2,1,0.2]
-        wineDroppingAnimation.repeatCount = HUGE
-        return wineDroppingAnimation
     }
     
-    func wineAnimation() {
-        dropImage.layer.addAnimation(addWineDroppingAnimation(0.0), forKey: "basic")
-        dropImage2.layer.addAnimation(addWineDroppingAnimation(0.2), forKey: "basic")
-        dropImage3.layer.addAnimation(addWineDroppingAnimation(0.4), forKey: "basic")
-        dropImage4.layer.addAnimation(addWineDroppingAnimation(0.6), forKey: "basic")
-        dropImage5.layer.addAnimation(addWineDroppingAnimation(0.8), forKey: "basic")
-        dropImage6.layer.addAnimation(addWineDroppingAnimation(1.0), forKey: "basic")
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        dropAnimation()
+    }
+
+    func addWaterDroppingAnimation(beginTime: CFTimeInterval) -> CAKeyframeAnimation {
+        let waterDroppingAnimation = CAKeyframeAnimation.init(keyPath: "position.y")
+        waterDroppingAnimation.beginTime = beginTime
+        waterDroppingAnimation.duration = 2.0
+        waterDroppingAnimation.speed = 8.0
+        waterDroppingAnimation.values = [0,30]
+        waterDroppingAnimation.repeatCount = HUGE
+        return waterDroppingAnimation
+    }
+    
+    func dropAnimation() {
+        dropImage.layer.addAnimation(addWaterDroppingAnimation(0.0), forKey: "basic")
+//        dropImage2.layer.addAnimation(addWaterDroppingAnimation(0.2), forKey: "basic")
+//        dropImage3.layer.addAnimation(addWaterDroppingAnimation(0.4), forKey: "basic")
+//        dropImage4.layer.addAnimation(addWaterDroppingAnimation(0.6), forKey: "basic")
+//        dropImage5.layer.addAnimation(addWaterDroppingAnimation(0.8), forKey: "basic")
+//        dropImage6.layer.addAnimation(addWaterDroppingAnimation(1.0), forKey: "basic")
+        dropImage2.hidden = true
+        dropImage3.hidden = true
+        dropImage4.hidden = true
+        dropImage5.hidden = true
+        dropImage6.hidden = true
     }
 
 }

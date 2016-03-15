@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l1j-b4-XvQ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -7,10 +7,63 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="KH5-1D-xfo">
+            <objects>
+                <viewController id="l1j-b4-XvQ" userLabel="Main View Controller" customClass="ViewController" customModule="SwiftActivityLoaders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7cj-i3-esA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZDd-6Y-G2r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rb9-W5-qHT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De4-h1-6pT">
+                                <rect key="frame" x="249" y="70" width="102" height="38"/>
+                                <color key="backgroundColor" red="0.81849719752624994" green="0.88383838383838387" blue="0.78892465956340752" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Glass Filling">
+                                    <color key="titleColor" red="0.083756917225415006" green="0.27729689409345737" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="glassFillingButtonClicked:" destination="l1j-b4-XvQ" eventType="touchUpInside" id="69U-V6-7mG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suU-Tn-GVa">
+                                <rect key="frame" x="252" y="132" width="96" height="38"/>
+                                <color key="backgroundColor" red="0.81849719750000005" green="0.88383838380000002" blue="0.78892465960000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Car Loader">
+                                    <color key="titleColor" red="0.083756917230000005" green="0.27729689410000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="carLoaderButtonClicked:" destination="l1j-b4-XvQ" eventType="touchUpInside" id="TEx-HP-ehl"/>
+                                    <action selector="glassFillingButtonClicked:" destination="l1j-b4-XvQ" eventType="touchUpInside" id="43a-85-5Pl"/>
+                                    <segue destination="Rwi-tM-BSS" kind="presentation" identifier="carSegue" id="wN2-7w-M3h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="suU-Tn-GVa" firstAttribute="top" secondItem="De4-h1-6pT" secondAttribute="bottom" constant="24" id="B1d-hd-Frm"/>
+                            <constraint firstItem="De4-h1-6pT" firstAttribute="centerX" secondItem="rb9-W5-qHT" secondAttribute="centerX" id="Xu3-tO-eNM"/>
+                            <constraint firstItem="suU-Tn-GVa" firstAttribute="centerX" secondItem="De4-h1-6pT" secondAttribute="centerX" id="gVh-o3-hv0"/>
+                            <constraint firstItem="De4-h1-6pT" firstAttribute="top" secondItem="7cj-i3-esA" secondAttribute="bottom" constant="50" id="msT-C0-kNW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="waterSegue" id="TdF-de-kMm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tnY-pp-FpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-415" y="259"/>
+        </scene>
         <!--Glass Filling View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GlassFillingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="waterFilling" id="BYZ-38-t0r" userLabel="Glass Filling View Controller" customClass="GlassFillingViewController" customModule="SwiftActivityLoaders" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -135,23 +188,69 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dropImage" destination="9VI-gh-gMF" id="LON-Q2-UAP"/>
-                        <outlet property="dropImage2" destination="EUr-Sx-Ov8" id="PA5-7p-Dz8"/>
-                        <outlet property="dropImage3" destination="osN-bC-OMn" id="7vg-7E-dv8"/>
-                        <outlet property="dropImage4" destination="ATe-ap-hjM" id="uo2-ZZ-KhY"/>
-                        <outlet property="dropImage5" destination="mZC-3S-Rhl" id="YkV-8U-S9B"/>
-                        <outlet property="dropImage6" destination="VkB-zo-Oif" id="ii2-lc-aH9"/>
-                        <outlet property="dropView" destination="oPh-AH-ROj" id="GVR-Yn-kNM"/>
+                        <outlet property="dropImage" destination="9VI-gh-gMF" id="KYm-o4-JVb"/>
+                        <outlet property="dropImage2" destination="EUr-Sx-Ov8" id="dsB-ev-m6g"/>
+                        <outlet property="dropImage3" destination="osN-bC-OMn" id="78B-5s-grE"/>
+                        <outlet property="dropImage4" destination="ATe-ap-hjM" id="fE7-Wn-G77"/>
+                        <outlet property="dropImage5" destination="mZC-3S-Rhl" id="7tZ-O3-Vyl"/>
+                        <outlet property="dropImage6" destination="VkB-zo-Oif" id="T2c-2x-Cha"/>
+                        <outlet property="dropView" destination="oPh-AH-ROj" id="Wc3-Pi-ucQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="262"/>
         </scene>
+        <!--Car Loader View Controller-->
+        <scene sceneID="ZvY-nG-jUQ">
+            <objects>
+                <viewController id="Rwi-tM-BSS" customClass="CarLoaderViewController" customModule="SwiftActivityLoaders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJn-WG-NKA"/>
+                        <viewControllerLayoutGuide type="bottom" id="YIJ-Mt-eKV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fo6-Qa-RXN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passenger" translatesAutoresizingMaskIntoConstraints="NO" id="Pu7-7E-407">
+                                <rect key="frame" x="290" y="290" width="12" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="ETR-Bz-H2V"/>
+                                    <constraint firstAttribute="height" constant="20" id="f1T-78-SUX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_black" translatesAutoresizingMaskIntoConstraints="NO" id="57X-Gz-fOf">
+                                <rect key="frame" x="-30" y="275" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IK2-5C-qdM"/>
+                                    <constraint firstAttribute="height" constant="50" id="edc-Zz-zQX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pu7-7E-407" firstAttribute="centerY" secondItem="Fo6-Qa-RXN" secondAttribute="centerY" id="96m-nm-kV3"/>
+                            <constraint firstItem="57X-Gz-fOf" firstAttribute="leading" secondItem="Fo6-Qa-RXN" secondAttribute="leading" constant="-30" id="F67-Go-M41"/>
+                            <constraint firstItem="Pu7-7E-407" firstAttribute="centerX" secondItem="Fo6-Qa-RXN" secondAttribute="centerX" constant="-4" id="ZRT-fi-VBK"/>
+                            <constraint firstItem="57X-Gz-fOf" firstAttribute="centerY" secondItem="Fo6-Qa-RXN" secondAttribute="centerY" id="ska-wa-i3l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carImageView" destination="57X-Gz-fOf" id="YKZ-Ls-Iwq"/>
+                        <outlet property="passengerImageView" destination="Pu7-7E-407" id="q0J-Md-gdh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8i7-zN-4oM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="988"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Tap" width="50" height="50"/>
+        <image name="car_black" width="128" height="128"/>
         <image name="drop" width="25" height="25"/>
         <image name="glass" width="64" height="64"/>
+        <image name="passenger" width="60" height="83"/>
     </resources>
 </document>
