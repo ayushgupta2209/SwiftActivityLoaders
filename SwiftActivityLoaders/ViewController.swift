@@ -25,5 +25,9 @@ class ViewController: UIViewController {
         self.performSegueWithIdentifier("carSegue", sender: self)
     }
 
+    @IBAction func pizzaBiteButtonClicked(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("pizzaSegue", sender: self)
+    }
 }
 
