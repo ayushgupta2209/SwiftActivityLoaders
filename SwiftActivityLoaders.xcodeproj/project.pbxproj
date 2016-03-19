@@ -12,6 +12,7 @@
 		C73C47A71C97E2AE00D4489B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73C47A61C97E2AE00D4489B /* Assets.xcassets */; };
 		C73C47AA1C97E2AE00D4489B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73C47A81C97E2AE00D4489B /* LaunchScreen.storyboard */; };
 		C73C47B61C97E4DF00D4489B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73C47B51C97E4DF00D4489B /* Main.storyboard */; };
+		C797BDAA1C999A4700E1219C /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C797BDA91C999A4700E1219C /* PizzaViewController.swift */; };
 		C7EA7A511C9847F900B1D347 /* GlassFillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7A501C9847F900B1D347 /* GlassFillingViewController.swift */; };
 		C7EA7A531C984F4D00B1D347 /* CarLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7A521C984F4D00B1D347 /* CarLoaderViewController.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		C73C47A91C97E2AE00D4489B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C73C47AB1C97E2AE00D4489B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C73C47B51C97E4DF00D4489B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C797BDA91C999A4700E1219C /* PizzaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
 		C7EA7A501C9847F900B1D347 /* GlassFillingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassFillingViewController.swift; sourceTree = "<group>"; };
 		C7EA7A521C984F4D00B1D347 /* CarLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarLoaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 			children = (
 				C7EA7A501C9847F900B1D347 /* GlassFillingViewController.swift */,
 				C7EA7A521C984F4D00B1D347 /* CarLoaderViewController.swift */,
+				C797BDA91C999A4700E1219C /* PizzaViewController.swift */,
 			);
 			path = "Loaders View Controller";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C797BDAA1C999A4700E1219C /* PizzaViewController.swift in Sources */,
 				C7EA7A531C984F4D00B1D347 /* CarLoaderViewController.swift in Sources */,
 				C73C47A21C97E2AE00D4489B /* ViewController.swift in Sources */,
 				C73C47A01C97E2AE00D4489B /* AppDelegate.swift in Sources */,
